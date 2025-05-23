@@ -2,3 +2,4 @@ matplotlib
 numpy
 transformers
 torch
+pandas
