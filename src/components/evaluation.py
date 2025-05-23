@@ -114,5 +114,8 @@ class PerplexityCalculator:
 
                     label = model_inputs["input_ids"]
                     label[label == self.tokenizer.pad_token_id] = PAD_TOKEN_LABEL_ID
+
+                    shift_logits = logits[..., :-1, :].contiguous()
+                    shift_labels = label[..., 1:].contiguous()
                     
 
